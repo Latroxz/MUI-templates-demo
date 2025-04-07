@@ -14,6 +14,10 @@ import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import ColorModeIconDropdown from '.././theme/ColorModeIconDropdown';
 import Sitemark from './SitemarkIcon';
 
+  const handleDashboardClick = () => {
+    window.location.href = '/dashboard'; // Navega a la ruta "/dashboard"
+  };
+
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
@@ -53,8 +57,8 @@ export default function AppAppBar() {
           <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', px: 0 }}>
             <Sitemark />
             <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-              <Button variant="text" color="info" size="small">
-                Features
+              <Button variant="text" color="info" size="small" onClick={handleDashboardClick}>
+                Demo Dashboard
               </Button>
               <Button variant="text" color="info" size="small">
                 Testimonials
