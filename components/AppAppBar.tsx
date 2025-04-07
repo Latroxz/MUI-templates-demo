@@ -87,9 +87,11 @@ export default function AppAppBar() {
               alignItems: 'center',
             }}
           >
-            <Button color="primary" variant="text" size="small">
-              Sign in
-            </Button>
+             <Link to="/sign-in">
+                <Button variant="text" size="small">
+                  Sign-in
+                </Button>
+              </Link>
             <Button color="primary" variant="contained" size="small">
               Sign up
             </Button>
