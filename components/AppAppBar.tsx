@@ -13,10 +13,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import ColorModeIconDropdown from '.././theme/ColorModeIconDropdown';
 import Sitemark from './SitemarkIcon';
-
-  const handleDashboardClick = () => {
-    window.location.href = '/dashboard'; // Navega a la ruta "/dashboard"
-  };
+import { Link } from 'react-router-dom';
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   display: 'flex',
@@ -57,15 +54,21 @@ export default function AppAppBar() {
           <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', px: 0 }}>
             <Sitemark />
             <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-              <Button variant="text" color="info" size="small" onClick={handleDashboardClick}>
-                Demo Dashboard
-              </Button>
-              <Button variant="text" color="info" size="small">
-                Testimonials
-              </Button>
-              <Button variant="text" color="info" size="small">
-                Highlights
-              </Button>
+              <Link to="/dashboard">
+                <Button variant="text" color="info" size="small">
+                  Demo Dashboard
+                </Button>
+              </Link>
+              <Link to="/checkout">
+                <Button variant="text" color="info" size="small">
+                  Demo Checkout
+                </Button>
+              </Link>
+              <Link to="/sign-in">
+                <Button variant="text" color="info" size="small">
+                  Demo Sign-in
+                </Button>
+              </Link>
               <Button variant="text" color="info" size="small">
                 Pricing
               </Button>
