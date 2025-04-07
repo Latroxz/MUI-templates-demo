@@ -14,8 +14,6 @@ import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import ColorModeIconDropdown from '.././theme/ColorModeIconDropdown';
 import Sitemark from './SitemarkIcon';
 import { Link } from 'react-router-dom';
-import SignIn from './main/SignIn';
-import { Dialog, Modal } from '@mui/material';
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   display: 'flex',
@@ -34,35 +32,11 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 }));
 
 export default function AppAppBar() {
-  
   const [open, setOpen] = React.useState(false);
-  const [showSignInDialog, setShowSignInDialog ] = React.useState(false);
-  const [openDialog, setOpenDialog] = React.useState(false);
-
 
   const toggleDrawer = (newOpen: boolean) => () => {
     setOpen(newOpen);
   };
-
-  const handleClickOpen = () => {
-    setOpenDialog(true);
-  };
-
-  const handleClose = () => {
-    setOpenDialog(false);
-  };
-
-  const style = {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: 800,
-    bgcolor: 'background.paper',
-    border: '2px solid #000',
-    p: 4,
-  };
-  
 
   return (
     <AppBar
@@ -113,21 +87,16 @@ export default function AppAppBar() {
               alignItems: 'center',
             }}
           >
-                <Button variant="text" size="small" onClick={handleClickOpen}>
+             <Link to="/sign-in">
+                <Button variant="text" size="small">
                   Sign-in
                 </Button>
-                <Modal open={openDialog} onClose={handleClose}>
-                  <Box  sx={style}>
-                    <SignIn>
-                    </SignIn>
-                    </Box>
-                </Modal>
+              </Link>
             <Button color="primary" variant="contained" size="small">
               Sign up
             </Button>
             <ColorModeIconDropdown />
           </Box>
-          {/* rendered when screen is small or smartphones */}
           <Box sx={{ display: { xs: 'flex', md: 'none' }, gap: 1 }}>
             <ColorModeIconDropdown size="medium" />
             <IconButton aria-label="Menu button" onClick={toggleDrawer(true)}>
