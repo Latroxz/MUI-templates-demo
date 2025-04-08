@@ -57,7 +57,7 @@ const SignUpContainer = styled(Stack)(({ theme }) => ({
       backgroundImage:
         'radial-gradient(at 50% 50%, hsla(210, 100%, 16%, 0.5), hsl(220, 30%, 5%))',
     }),
-    backgroundSize: 'cover'
+    backgroundSize: 'cover',
   },
 }));
 
@@ -220,7 +220,7 @@ export default function SignUp(props: { disableCustomTheme?: boolean }) {
             <Typography sx={{ textAlign: 'center' }}>
               Already have an account?{' '}
               <Link
-                href="/material-ui/getting-started/templates/sign-in/"
+                href="/sign-in"
                 variant="body2"
                 sx={{ alignSelf: 'center' }}
               >

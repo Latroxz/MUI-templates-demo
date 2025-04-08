@@ -154,7 +154,9 @@ export default function Checkout(props: { disableCustomTheme?: boolean }) {
                   {activeStep >= 2 ? '$144.97' : '$134.98'}
                 </Typography>
               </div>
-              <InfoMobile totalPrice={activeStep >= 2 ? '$144.97' : '$134.98'} />
+              <InfoMobile
+                totalPrice={activeStep >= 2 ? '$144.97' : '$134.98'}
+              />
             </CardContent>
           </Card>
           <Box
@@ -184,7 +186,9 @@ export default function Checkout(props: { disableCustomTheme?: boolean }) {
                   key={label}
                 >
                   <StepLabel
-                    sx={{ '.MuiStepLabel-labelContainer': { maxWidth: '70px' } }}
+                    sx={{
+                      '.MuiStepLabel-labelContainer': { maxWidth: '70px' },
+                    }}
                   >
                     {label}
                   </StepLabel>

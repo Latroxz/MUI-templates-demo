@@ -58,7 +58,7 @@ const SignInContainer = styled(Stack)(({ theme }) => ({
       backgroundImage:
         'radial-gradient(at 50% 50%, hsla(210, 100%, 16%, 0.5), hsl(220, 30%, 5%))',
     }),
-    backgroundSize: 'cover'
+    backgroundSize: 'cover',
   },
 }));
 
@@ -120,7 +120,9 @@ export default function SignIn(props: { disableCustomTheme?: boolean }) {
     <AppTheme {...props}>
       <CssBaseline enableColorScheme />
       <SignInContainer direction="column" justifyContent="space-between">
-        <ColorModeSelect sx={{ position: 'fixed', top: '1rem', right: '1rem' }} />
+        <ColorModeSelect
+          sx={{ position: 'fixed', top: '1rem', right: '1rem' }}
+        />
         <Card variant="outlined">
           <SitemarkIcon />
           <Typography

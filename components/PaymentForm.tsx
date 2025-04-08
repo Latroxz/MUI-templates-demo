@@ -143,7 +143,9 @@ export default function PaymentForm() {
                 },
               }}
             >
-              <CardContent sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+              <CardContent
+                sx={{ display: 'flex', alignItems: 'center', gap: 1 }}
+              >
                 <CreditCardRoundedIcon
                   fontSize="small"
                   sx={[
@@ -174,7 +176,9 @@ export default function PaymentForm() {
                 },
               }}
             >
-              <CardContent sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+              <CardContent
+                sx={{ display: 'flex', alignItems: 'center', gap: 1 }}
+              >
                 <AccountBalanceRoundedIcon
                   fontSize="small"
                   sx={[
@@ -189,7 +193,9 @@ export default function PaymentForm() {
                     },
                   ]}
                 />
-                <Typography sx={{ fontWeight: 'medium' }}>Bank account</Typography>
+                <Typography sx={{ fontWeight: 'medium' }}>
+                  Bank account
+                </Typography>
               </CardContent>
             </CardActionArea>
           </Card>

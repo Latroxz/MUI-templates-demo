@@ -36,11 +36,9 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 }));
 
 export default function AppAppBar() {
-  
   const [open, setOpen] = React.useState(false);
-  const [showSignInDialog, setShowSignInDialog ] = React.useState(false);
+  const [showSignInDialog, setShowSignInDialog] = React.useState(false);
   const [showSignupDialog, setShowSignupDialog] = React.useState(false);
-
 
   const toggleDrawer = (newOpen: boolean) => () => {
     setOpen(newOpen);
@@ -72,7 +70,6 @@ export default function AppAppBar() {
     border: '2px solid #000',
     p: 4,
   };
-  
 
   return (
     <AppBar
@@ -87,7 +84,9 @@ export default function AppAppBar() {
     >
       <Container maxWidth="lg">
         <StyledToolbar variant="dense" disableGutters>
-          <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', px: 0 }}>
+          <Box
+            sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', px: 0 }}
+          >
             <Sitemark />
             <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
               <Link to="/dashboard">
@@ -110,10 +109,20 @@ export default function AppAppBar() {
                   Demo Sign-up
                 </Button>
               </Link>
-              <Button variant="text" color="info" size="small" sx={{ minWidth: 0 }}>
+              <Button
+                variant="text"
+                color="info"
+                size="small"
+                sx={{ minWidth: 0 }}
+              >
                 FAQ
               </Button>
-              <Button variant="text" color="info" size="small" sx={{ minWidth: 0 }}>
+              <Button
+                variant="text"
+                color="info"
+                size="small"
+                sx={{ minWidth: 0 }}
+              >
                 Blog
               </Button>
             </Box>
@@ -125,22 +134,36 @@ export default function AppAppBar() {
               alignItems: 'center',
             }}
           >
-                <Button variant="text" size="small" onClick={handleClickSignIn}>
-                  Sign-in
-                </Button>
-                <Dialog open={showSignInDialog} onClose={handleSignInClose} maxWidth={'sm'} fullWidth scroll='paper'>
-                  <DialogContent>
-                    <SignIn>
-                    </SignIn>
-                  </DialogContent>
-                </Dialog>
-            <Button color="primary" variant="contained" size="small" onClick={handleClickSignUp}>
+            <Button variant="text" size="small" onClick={handleClickSignIn}>
+              Sign-in
+            </Button>
+            <Dialog
+              open={showSignInDialog}
+              onClose={handleSignInClose}
+              maxWidth={'sm'}
+              fullWidth
+              scroll="paper"
+            >
+              <DialogContent>
+                <SignIn></SignIn>
+              </DialogContent>
+            </Dialog>
+            <Button
+              color="primary"
+              variant="contained"
+              size="small"
+              onClick={handleClickSignUp}
+            >
               Sign up
             </Button>
-            <Dialog open={showSignupDialog} onClose={handleSignUpClose} maxWidth={'sm'} scroll='paper'>
+            <Dialog
+              open={showSignupDialog}
+              onClose={handleSignUpClose}
+              maxWidth={'sm'}
+              scroll="paper"
+            >
               <DialogContent>
-              <SignUp>
-              </SignUp>
+                <SignUp></SignUp>
               </DialogContent>
             </Dialog>
             <ColorModeIconDropdown />
