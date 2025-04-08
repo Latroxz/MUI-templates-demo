@@ -92,7 +92,7 @@ export default function AppAppBar() {
               </Link>
               <Link to="/sign-in">
                 <Button variant="text" color="info" size="small">
-                  Demo Sign-in
+                  Demo Sign-in Full page
                 </Button>
               </Link>
               <Button variant="text" color="info" size="small">

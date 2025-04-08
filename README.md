@@ -10,8 +10,9 @@ projects converted to vite for the examples inside <https://mui.com/material-ui/
 - Marketing
 - Checkout
 - Sign-in
+- Sign-in full screen
 
-## How to run
+## How to run the project
 
 1. After cloning the repo, do a `npm install --legacy-peer-deps` to install dependencies instead of `npm install`. Why? Because, for now, the library [react-spring/animated](https://www.npmjs.com/package/@react-spring/animated)
 hasn't updated their dependencies to react 19.
