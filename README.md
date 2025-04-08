@@ -11,6 +11,7 @@ projects converted to vite for the examples inside <https://mui.com/material-ui/
 - Checkout
 - Sign-in
 - Sign-in full screen
+- Sign-up
 
 ## How to run the project
 

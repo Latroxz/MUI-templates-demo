@@ -15,7 +15,9 @@ import ColorModeIconDropdown from '.././theme/ColorModeIconDropdown';
 import Sitemark from './SitemarkIcon';
 import { Link } from 'react-router-dom';
 import SignIn from './main/SignIn';
-import { Dialog, Modal } from '@mui/material';
+import Dialog from '@mui/material/Dialog';
+import SignUp from './main/SignUp';
+import { DialogContent } from '@mui/material';
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   display: 'flex',
@@ -37,19 +39,27 @@ export default function AppAppBar() {
   
   const [open, setOpen] = React.useState(false);
   const [showSignInDialog, setShowSignInDialog ] = React.useState(false);
-  const [openDialog, setOpenDialog] = React.useState(false);
+  const [showSignupDialog, setShowSignupDialog] = React.useState(false);
 
 
   const toggleDrawer = (newOpen: boolean) => () => {
     setOpen(newOpen);
   };
 
-  const handleClickOpen = () => {
-    setOpenDialog(true);
+  const handleClickSignIn = () => {
+    setShowSignInDialog(true);
   };
 
-  const handleClose = () => {
-    setOpenDialog(false);
+  const handleSignInClose = () => {
+    setShowSignInDialog(false);
+  };
+
+  const handleClickSignUp = () => {
+    setShowSignupDialog(true);
+  };
+
+  const handleSignUpClose = () => {
+    setShowSignupDialog(false);
   };
 
   const style = {
@@ -92,12 +102,14 @@ export default function AppAppBar() {
               </Link>
               <Link to="/sign-in">
                 <Button variant="text" color="info" size="small">
-                  Demo Sign-in Full page
+                  Demo Sign-in Full
                 </Button>
               </Link>
-              <Button variant="text" color="info" size="small">
-                Pricing
-              </Button>
+              <Link to="/sign-up">
+                <Button variant="text" color="info" size="small">
+                  Demo Sign-up
+                </Button>
+              </Link>
               <Button variant="text" color="info" size="small" sx={{ minWidth: 0 }}>
                 FAQ
               </Button>
@@ -113,18 +125,24 @@ export default function AppAppBar() {
               alignItems: 'center',
             }}
           >
-                <Button variant="text" size="small" onClick={handleClickOpen}>
+                <Button variant="text" size="small" onClick={handleClickSignIn}>
                   Sign-in
                 </Button>
-                <Modal open={openDialog} onClose={handleClose}>
-                  <Box  sx={style}>
+                <Dialog open={showSignInDialog} onClose={handleSignInClose} maxWidth={'sm'} fullWidth scroll='paper'>
+                  <DialogContent>
                     <SignIn>
                     </SignIn>
-                    </Box>
-                </Modal>
-            <Button color="primary" variant="contained" size="small">
+                  </DialogContent>
+                </Dialog>
+            <Button color="primary" variant="contained" size="small" onClick={handleClickSignUp}>
               Sign up
             </Button>
+            <Dialog open={showSignupDialog} onClose={handleSignUpClose} maxWidth={'sm'} scroll='paper'>
+              <DialogContent>
+              <SignUp>
+              </SignUp>
+              </DialogContent>
+            </Dialog>
             <ColorModeIconDropdown />
           </Box>
           {/* rendered when screen is small or smartphones */}
