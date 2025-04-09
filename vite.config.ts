@@ -5,7 +5,16 @@ export default defineConfig({
   plugins: [react()],
   server: {
     watch: {
-      usePolling: true
-    }
-  }
-})
+      usePolling: true,
+    },
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          mui: ['@mui/material', '@mui/icons-material']
+        },
+      },
+    },
+  },
+});

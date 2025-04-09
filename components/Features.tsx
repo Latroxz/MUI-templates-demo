@@ -17,27 +17,30 @@ const items = [
     title: 'Dashboard',
     description:
       'This item could provide a snapshot of the most important metrics or data points related to the product.',
-      imageLight: "url('https://mui.com/static/images/templates/templates-images/dash-light.png')",
-      imageDark: "url('https://mui.com/static/images/templates/templates-images/dash-dark.png')",
-      
+    imageLight:
+      "url('https://mui.com/static/images/templates/templates-images/dash-light.png')",
+    imageDark:
+      "url('https://mui.com/static/images/templates/templates-images/dash-dark.png')",
   },
   {
     icon: <EdgesensorHighRoundedIcon />,
     title: 'Mobile integration',
     description:
       'This item could provide information about the mobile app version of the product.',
-      imageLight: "url('https://mui.com/static/images/templates/templates-images/dash-light.png')",
-      imageDark: "url('https://mui.com/static/images/templates/templates-images/dash-dark.png')",
-      
+    imageLight:
+      "url('https://mui.com/static/images/templates/templates-images/dash-light.png')",
+    imageDark:
+      "url('https://mui.com/static/images/templates/templates-images/dash-dark.png')",
   },
   {
     icon: <DevicesRoundedIcon />,
     title: 'Available on all platforms',
     description:
       'This item could let users know the product is available on all platforms, such as web, mobile, and desktop.',
-      imageLight: "url('https://mui.com/static/images/templates/templates-images/dash-light.png')",
-      imageDark: "url('https://mui.com/static/images/templates/templates-images/dash-dark.png')",
-      
+    imageLight:
+      "url('https://mui.com/static/images/templates/templates-images/dash-light.png')",
+    imageDark:
+      "url('https://mui.com/static/images/templates/templates-images/dash-dark.png')",
   },
 ];
 
@@ -160,9 +163,9 @@ export default function Features() {
           variant="body1"
           sx={{ color: 'text.secondary', mb: { xs: 2, sm: 4 } }}
         >
-          Provide a brief overview of the key features of the product. For example,
-          you could list the number of features, their types or benefits, and
-          add-ons.
+          Provide a brief overview of the key features of the product. For
+          example, you could list the number of features, their types or
+          benefits, and add-ons.
         </Typography>
       </Box>
       <Box
@@ -192,7 +195,8 @@ export default function Features() {
                     height: '100%',
                     width: '100%',
                     '&:hover': {
-                      backgroundColor: (theme.vars || theme).palette.action.hover,
+                      backgroundColor: (theme.vars || theme).palette.action
+                        .hover,
                     },
                   }),
                   selectedItemIndex === index && {
