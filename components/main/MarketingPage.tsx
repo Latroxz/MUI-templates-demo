@@ -1,7 +1,7 @@
 import * as React from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
-import AppTheme from '../../theme/AppTheme';
+import AppTheme from '@theme/AppTheme';
 import AppAppBar from '../AppAppBar';
 import Hero from '../Hero';
 import LogoCollection from '../LogoCollection';

@@ -18,8 +18,8 @@ import InfoMobile from './components/InfoMobile';
 import PaymentForm from './components/PaymentForm';
 import Review from './components/Review';
 import SitemarkIcon from './components/SitemarkIcon';
-import AppTheme from './theme/AppTheme';
-import ColorModeIconDropdown from './theme/ColorModeIconDropdown';
+import AppTheme from '@theme/AppTheme';
+import ColorModeIconDropdown from '@theme/ColorModeIconDropdown';
 
 const steps = ['Shipping address', 'Payment details', 'Review your order'];
 function getStepContent(step: number) {

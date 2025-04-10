@@ -11,13 +11,13 @@ import AppNavbar from '../AppNavbar';
 import Header from '../Header';
 import MainGrid from '../MainGrid';
 import SideMenu from '../SideMenu';
-import AppTheme from '../../theme/AppTheme';
+import AppTheme from '@theme/AppTheme';
 import {
   chartsCustomizations,
   dataGridCustomizations,
   datePickersCustomizations,
   treeViewCustomizations,
-} from '../../theme/customizations';
+} from '@theme/customizations';
 
 const xThemeComponents = {
   ...chartsCustomizations,
