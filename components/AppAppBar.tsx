@@ -64,17 +64,6 @@ export default function AppAppBar() {
     document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const style = {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: 800,
-    bgcolor: 'background.paper',
-    border: '2px solid #000',
-    p: 4,
-  };
-
   return (
     <AppBar
       position="fixed"

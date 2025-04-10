@@ -3,8 +3,8 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Stack from '@mui/material/Stack';
 import AppTheme from '@theme/AppTheme';
 import ColorModeSelect from '@theme/ColorModeSelect';
-import SignInCard from '../SignInCard';
-import Content from '../Content';
+import SignInCard from '@components/SignInCard';
+import Content from '@components/Content';
 
 export default function SignInSide(props: { disableCustomTheme?: boolean }) {
   return (

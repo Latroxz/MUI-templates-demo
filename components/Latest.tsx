@@ -147,7 +147,12 @@ function Author({ authors }: { authors: { name: string; avatar: string }[] }) {
       }}
     >
       <Box
-        sx={{ display: 'flex', flexDirection: 'row', gap: 1, alignItems: 'center' }}
+        sx={{
+          display: 'flex',
+          flexDirection: 'row',
+          gap: 1,
+          alignItems: 'center',
+        }}
       >
         <AvatarGroup max={3}>
           {authors.map((author, index) => (
@@ -170,7 +175,7 @@ function Author({ authors }: { authors: { name: string; avatar: string }[] }) {
 
 export default function Latest() {
   const [focusedCardIndex, setFocusedCardIndex] = React.useState<number | null>(
-    null,
+    null
   );
 
   const handleFocus = (index: number) => {
@@ -215,7 +220,11 @@ export default function Latest() {
                   sx={{ fontSize: '1rem' }}
                 />
               </TitleTypography>
-              <StyledTypography variant="body2" color="text.secondary" gutterBottom>
+              <StyledTypography
+                variant="body2"
+                color="text.secondary"
+                gutterBottom
+              >
                 {article.description}
               </StyledTypography>
 
@@ -225,7 +234,12 @@ export default function Latest() {
         ))}
       </Grid>
       <Box sx={{ display: 'flex', flexDirection: 'row', pt: 4 }}>
-        <Pagination hidePrevButton hideNextButton count={10} boundaryCount={10} />
+        <Pagination
+          hidePrevButton
+          hideNextButton
+          count={10}
+          boundaryCount={10}
+        />
       </Box>
     </div>
   );

@@ -11,14 +11,15 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@components': path.resolve(__dirname, './components'),
+      '@components': path.resolve(__dirname, 'components'),
+      '@theme': path.resolve(__dirname, 'theme'),
     },
   },
   build: {
     rollupOptions: {
       output: {
         manualChunks: {
-          mui: ['@mui/material', '@mui/icons-material']
+          mui: ['@mui/material', '@mui/icons-material'],
         },
       },
     },
