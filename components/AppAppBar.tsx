@@ -60,6 +60,10 @@ export default function AppAppBar() {
     setShowSignupDialog(false);
   };
 
+  const scrollIntoFaq = () => {
+    document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   const style = {
     position: 'absolute',
     top: '50%',
@@ -109,21 +113,24 @@ export default function AppAppBar() {
                   Demo Sign-up
                 </Button>
               </Link>
+              <Link to="/blog">
+                <Button
+                  variant="text"
+                  color="info"
+                  size="small"
+                  sx={{ minWidth: 0 }}
+                >
+                  Demo Blog
+                </Button>
+              </Link>
               <Button
                 variant="text"
                 color="info"
                 size="small"
                 sx={{ minWidth: 0 }}
+                onClick={scrollIntoFaq}
               >
                 FAQ
-              </Button>
-              <Button
-                variant="text"
-                color="info"
-                size="small"
-                sx={{ minWidth: 0 }}
-              >
-                Blog
               </Button>
             </Box>
           </Box>
