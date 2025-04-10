@@ -11,12 +11,12 @@ import MenuItem from '@mui/material/MenuItem';
 import Drawer from '@mui/material/Drawer';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
-import ColorModeIconDropdown from '.././theme/ColorModeIconDropdown';
-import Sitemark from './SitemarkIcon';
+import ColorModeIconDropdown from '@theme/ColorModeIconDropdown';
+import Sitemark from '@components/SitemarkIcon';
 import { Link } from 'react-router-dom';
-import SignIn from './main/SignIn';
+import SignIn from '@components/main/SignIn';
 import Dialog from '@mui/material/Dialog';
-import SignUp from './main/SignUp';
+import SignUp from '@components/main/SignUp';
 import { DialogContent } from '@mui/material';
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
@@ -60,15 +60,8 @@ export default function AppAppBar() {
     setShowSignupDialog(false);
   };
 
-  const style = {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: 800,
-    bgcolor: 'background.paper',
-    border: '2px solid #000',
-    p: 4,
+  const scrollIntoFaq = () => {
+    document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -109,21 +102,24 @@ export default function AppAppBar() {
                   Demo Sign-up
                 </Button>
               </Link>
+              <Link to="/blog">
+                <Button
+                  variant="text"
+                  color="info"
+                  size="small"
+                  sx={{ minWidth: 0 }}
+                >
+                  Demo Blog
+                </Button>
+              </Link>
               <Button
                 variant="text"
                 color="info"
                 size="small"
                 sx={{ minWidth: 0 }}
+                onClick={scrollIntoFaq}
               >
                 FAQ
-              </Button>
-              <Button
-                variant="text"
-                color="info"
-                size="small"
-                sx={{ minWidth: 0 }}
-              >
-                Blog
               </Button>
             </Box>
           </Box>
