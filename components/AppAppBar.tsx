@@ -12,11 +12,11 @@ import Drawer from '@mui/material/Drawer';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import ColorModeIconDropdown from '@theme/ColorModeIconDropdown';
-import Sitemark from './SitemarkIcon';
+import Sitemark from '@components/SitemarkIcon';
 import { Link } from 'react-router-dom';
-import SignIn from './main/SignIn';
+import SignIn from '@components/main/SignIn';
 import Dialog from '@mui/material/Dialog';
-import SignUp from './main/SignUp';
+import SignUp from '@components/main/SignUp';
 import { DialogContent } from '@mui/material';
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
