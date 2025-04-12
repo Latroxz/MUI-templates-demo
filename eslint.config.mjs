@@ -6,7 +6,7 @@ import prettierPlugin from 'eslint-plugin-prettier';
 
 export default [
   {
-    ignores: ['node_modules', 'dist', 'vite.config.ts'], // Añade archivos o directorios a ignorar
+    ignores: ['node_modules', 'dist', 'vite.config.ts'],
   },
   {
     files: ['**/*.{ts,tsx}'],
