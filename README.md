@@ -22,5 +22,5 @@ projects converted to vite for the examples inside <https://mui.com/material-ui/
 2. run `npm start` and your local environment will run in `localhost:5173` or any other port that isn't occupied (vite will automatically tell you what route in the console).
 
 ## Preview the demo online
-[Public Sandbox](https://codesandbox.io/p/sandbox/github/Latroxz/MUI-templates-demo)
 
+[Public Sandbox](https://codesandbox.io/p/sandbox/github/Latroxz/MUI-templates-demo)
